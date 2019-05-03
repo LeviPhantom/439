@@ -62,3 +62,83 @@ INSERT INTO SALES VALUES
     (875769645622,'2019-03-23 00:00:00',57481905,14.99,N'20',N'NULL',N'NULL',N'NULL'),
     (638669199824,'2019-03-27 00:00:00',59764315,59.99,N'60',N'NULL',N'NULL',N'NULL'),
     (534908744257,'2019-03-29 00:00:00',49268861,59.99,N'60',N'NULL',N'NULL',N'NULL');
+    
+    IF NOT EXISTS (
+    select * from sysobjects where name='RETURNS' and xtype='U'
+) CREATE TABLE RETURNS (
+    [Receipt_Number] INT,
+    [Date] DATETIME,
+    [ReturnedProductID] INT,
+    [Amount_Returned] NUMERIC(4, 2),
+    [CashPaidOut] NVARCHAR(4),
+    [Card_Number] NVARCHAR(16),
+    [Card_Name] NVARCHAR(19),
+    [AuthorizingCashier] NVARCHAR(12)
+);
+INSERT INTO RETURNS VALUES
+    (812571561700,'2019-03-17 00:00:00',14719881,14.99,N'NULL',N'3551567071296540',N'Sallyanne Crutchley',N'Tracie Saxon'),
+    (875769645622,'2019-03-25 00:00:00',57481905,14.99,N'15',N'NULL',N'NULL',N'Tracie Saxon');
+    
+CREATE TABLE Copy_of_PA2_Data_Tables (
+    [Product_ID] INT,
+    [Name] NVARCHAR(26),
+    [Purchase_Price] INT,
+    [Purchase_Date] DATETIME,
+    [Supplier] NVARCHAR(8),
+    [Selling_Price] NUMERIC(5, 2),
+    [Selling_Date] NVARCHAR(19),
+    [CategoryID] INT,
+    [InStock] INT
+);
+INSERT INTO Copy_of_PA2_Data_Tables VALUES
+    (96729404,N'Super Smash Bros. Ultimate',55,'2019-03-01 00:00:00',N'Nintendo',59.99,N'2019-03-08 00:00:00',1,0),
+    (32411486,N'Super Smash Bros. Ultimate',55,'2019-03-01 00:00:00',N'Nintendo',59.99,N'2019-03-06 00:00:00',1,0),
+    (39444162,N'Super Smash Bros. Ultimate',55,'2019-03-01 00:00:00',N'Nintendo',59.99,N'2019-03-17 00:00:00',1,0),
+    (38331597,N'Super Smash Bros. Ultimate',55,'2019-03-01 00:00:00',N'Nintendo',59.99,N'2019-03-11 00:00:00',1,0),
+    (49268861,N'Super Smash Bros. Ultimate',55,'2019-03-01 00:00:00',N'Nintendo',59.99,N'2019-03-29 00:00:00',1,0),
+    (55175252,N'Super Smash Bros. Ultimate',55,'2019-03-01 00:00:00',N'Nintendo',59.99,N'2019-03-09 00:00:00',1,0),
+    (9351649,N'Super Smash Bros. Ultimate',55,'2019-03-01 00:00:00',N'Nintendo',59.99,N'2019-03-04 00:00:00',1,0),
+    (50096875,N'Super Smash Bros. Ultimate',55,'2019-03-01 00:00:00',N'Nintendo',59.99,N'2019-03-09 00:00:00',1,0),
+    (59764315,N'Super Smash Bros. Ultimate',55,'2019-03-01 00:00:00',N'Nintendo',59.99,N'2019-03-27 00:00:00',1,0),
+    (19590864,N'Super Smash Bros. Ultimate',55,'2019-03-01 00:00:00',N'Nintendo',59.99,N'2019-03-10 00:00:00',1,0),
+    (15552506,N'Super Smash Bros. Ultimate',55,'2019-03-01 00:00:00',N'Nintendo',59.99,N'NULL',1,1),
+    (30714802,N'Super Smash Bros. Ultimate',55,'2019-03-01 00:00:00',N'Nintendo',59.99,N'NULL',1,1),
+    (27491829,N'Super Smash Bros. Ultimate',55,'2019-03-01 00:00:00',N'Nintendo',59.99,N'NULL',1,1),
+    (43452022,N'Super Smash Bros. Ultimate',55,'2019-03-01 00:00:00',N'Nintendo',59.99,N'NULL',1,1),
+    (19561250,N'Super Smash Bros. Ultimate',55,'2019-03-01 00:00:00',N'Nintendo',59.99,N'NULL',1,1),
+    (44024285,N'Super Smash Bros. Ultimate',55,'2019-03-01 00:00:00',N'Nintendo',59.99,N'NULL',1,1),
+    (93963354,N'Super Smash Bros. Ultimate',55,'2019-03-01 00:00:00',N'Nintendo',59.99,N'NULL',1,1),
+    (11819306,N'Super Smash Bros. Ultimate',55,'2019-03-01 00:00:00',N'Nintendo',59.99,N'NULL',1,1),
+    (67034347,N'Super Smash Bros. Ultimate',55,'2019-03-01 00:00:00',N'Nintendo',59.99,N'NULL',1,1),
+    (57667297,N'Super Smash Bros. Ultimate',55,'2019-04-01 00:00:00',N'Nintendo',59.99,N'NULL',1,0),
+    (70421376,N'Super Smash Bros. Ultimate',55,'2019-04-01 00:00:00',N'Nintendo',59.99,N'NULL',1,0),
+    (53013424,N'Super Smash Bros. Ultimate',55,'2019-04-01 00:00:00',N'Nintendo',59.99,N'NULL',1,0),
+    (51312354,N'Super Smash Bros. Ultimate',55,'2019-04-01 00:00:00',N'Nintendo',59.99,N'NULL',1,0),
+    (69327480,N'Super Smash Bros. Ultimate',55,'2019-04-01 00:00:00',N'Nintendo',59.99,N'NULL',1,0),
+    (85689072,N'Super Smash Bros. Ultimate',55,'2019-04-01 00:00:00',N'Nintendo',59.99,N'NULL',1,0),
+    (3800874,N'Super Smash Bros. Ultimate',55,'2019-04-01 00:00:00',N'Nintendo',59.99,N'NULL',1,0),
+    (59567362,N'Super Smash Bros. Ultimate',55,'2019-04-01 00:00:00',N'Nintendo',59.99,N'NULL',1,0),
+    (10221428,N'Super Smash Bros. Ultimate',55,'2019-04-01 00:00:00',N'Nintendo',59.99,N'NULL',1,0),
+    (30668291,N'Super Smash Bros. Ultimate',55,'2019-04-01 00:00:00',N'Nintendo',59.99,N'NULL',1,0),
+    (60456664,N'Switch Gamecube  Adapter',12,'2019-03-01 00:00:00',N'Nintendo',14.99,N'2019-03-14 00:00:00',3,0),
+    (14719881,N'Switch Gamecube  Adapter',12,'2019-03-01 00:00:00',N'Nintendo',14.99,N'2019-03-17 00:00:00',3,0),
+    (57399278,N'Switch Gamecube  Adapter',12,'2019-03-01 00:00:00',N'Nintendo',14.99,N'2019-03-06 00:00:00',3,0),
+    (57481905,N'Switch Gamecube  Adapter',12,'2019-03-01 00:00:00',N'Nintendo',14.99,N'2019-03-23 00:00:00',3,0),
+    (85186093,N'Switch Gamecube  Adapter',12,'2019-03-01 00:00:00',N'Nintendo',14.99,N'NULL',3,1),
+    (84297974,N'Nintendo Switch',250,'2019-03-01 00:00:00',N'Nintendo',299.99,N'2019-03-08 00:00:00',2,0),
+    (84163071,N'Nintendo Switch',250,'2019-03-01 00:00:00',N'Nintendo',299.99,N'2019-03-06 00:00:00',2,0),
+    (92139236,N'Nintendo Switch',250,'2019-03-01 00:00:00',N'Nintendo',299.99,N'2019-03-18 00:00:00',2,0),
+    (70460678,N'Nintendo Switch',250,'2019-03-01 00:00:00',N'Nintendo',299.99,N'2019-03-12 00:00:00',2,0),
+    (46077076,N'Nintendo Switch',250,'2019-03-01 00:00:00',N'Nintendo',299.99,N'2019-03-02 00:00:00',2,0),
+    (56498601,N'Nintendo Switch',250,'2019-03-01 00:00:00',N'Nintendo',299.99,N'2019-03-18 00:00:00',2,0),
+    (46641482,N'Nintendo Switch',250,'2019-03-01 00:00:00',N'Nintendo',299.99,N'2019-03-22 00:00:00',2,0),
+    (38802514,N'Nintendo Switch',250,'2019-03-01 00:00:00',N'Nintendo',299.99,N'2019-03-07 00:00:00',2,0),
+    (36296415,N'Nintendo Switch',250,'2019-03-01 00:00:00',N'Nintendo',299.99,N'NULL',2,1),
+    (10338415,N'Nintendo Switch',250,'2019-03-01 00:00:00',N'Nintendo',299.99,N'NULL',2,1),
+    (18713507,N'TW:WH2 DLC Key',5,'2019-04-01 00:00:00',N'SEGA',8.99,N'NULL',4,1),
+    (31817129,N'TW:WH2 DLC Key',5,'2019-04-01 00:00:00',N'SEGA',8.99,N'NULL',4,1),
+    (95185884,N'TW:WH2 DLC Key',5,'2019-04-01 00:00:00',N'SEGA',8.99,N'NULL',4,1),
+    (46238587,N'TW:WH2 DLC Key',5,'2019-04-01 00:00:00',N'SEGA',8.99,N'NULL',4,1),
+    (84709775,N'TW:WH2 DLC Key',5,'2019-04-01 00:00:00',N'SEGA',8.99,N'NULL',4,1),
+    (18153894,N'TW:WH2 DLC Key',5,'2019-04-01 00:00:00',N'SEGA',8.99,N'NULL',4,1);
+
