@@ -170,5 +170,78 @@ INSERT INTO ORDERS VALUES
     (21404746,59567362,'2019-04-01 00:00:00','2019-04-08 00:00:00',N'Nintendo'),
     (21404746,10221428,'2019-04-01 00:00:00','2019-04-08 00:00:00',N'Nintendo'),
     (21404746,30668291,'2019-04-01 00:00:00','2019-04-08 00:00:00',N'Nintendo');
+    
+    CREATE TABLE EVENTS (
+    [EventID] INT,
+    [Date] DATETIME,
+    [EventName] NVARCHAR(37),
+    [WorkingStaff] INT,
+    [StoreLocation] INT
+);
+INSERT INTO EVENTS VALUES
+    (29,'2019-04-20 00:00:00',N'Super Smash Bros. Spring Invitational',103455537,1),
+    (29,'2019-04-20 00:00:00',N'Super Smash Bros. Spring Invitational',219403882,1),
+    (30,'2019-04-27 00:00:00',N'Super Smash Bros. Ultimate Tournament',103455537,1),
+    (30,'2019-04-27 00:00:00',N'Super Smash Bros. Ultimate Tournament',697835688,1),
+    (30,'2019-04-27 00:00:00',N'Super Smash Bros. Ultimate Tournament',709334488,1);
+
+CREATE TABLE MEMBERS (
+    [Name] NVARCHAR(19),
+    [MemberID] INT,
+    [Points] INT,
+    [Email_Address] NVARCHAR(32),
+    [Phone_Number] NVARCHAR(12)
+);
+INSERT INTO MEMBERS VALUES
+    (N'Paige Sloyan',169063,378,N'psloyan0@pinterest.com',N'985-478-4250'),
+    (N'Elladine Beechcraft',547928,264,N'ebeechcraft1@vk.com',N'536-824-6705'),
+    (N'Rainer Hylden',347158,365,N'rhylden2@mlb.com',N'731-521-4592'),
+    (N'Rahel Hablet',819150,356,N'rhablet3@cornell.edu',N'673-637-5132'),
+    (N'Galvan Messer',54343,369,N'gmesser4@ovh.net',N'407-599-9058'),
+    (N'Papagena Redd',523687,325,N'predd5@mapquest.com',N'176-724-4503'),
+    (N'Irwinn Costellow',54377,421,N'icostellow6@last.fm',N'906-444-4211'),
+    (N'Chan Mantz',289549,479,N'cmantz7@sitemeter.com',N'146-243-8212'),
+    (N'Carmita Tretwell',419593,451,N'ctretwell8@xrea.com',N'831-161-4490'),
+    (N'Rene Pelman',582442,482,N'rpelman9@unblog.fr',N'562-740-4174'),
+    (N'Allin Berks',707610,417,N'aberksa@dailymail.co.uk',N'167-407-4050'),
+    (N'Wynn Cosslett',828182,437,N'wcosslettb@abc.net.au',N'116-313-1090'),
+    (N'Heddie Olpin',276747,317,N'holpinc@globo.com',N'254-115-8872'),
+    (N'Orville Anear',546549,268,N'oaneard@earthlink.net',N'259-770-2820'),
+    (N'Bernarr Colleford',418065,322,N'bcolleforde@vimeo.com',N'403-684-7297'),
+    (N'Abagael Yegorev',725507,394,N'ayegorevf@discuz.net',N'211-232-0164'),
+    (N'Drud Dunklee',41593,348,N'ddunkleeg@google.com.br',N'999-117-1064'),
+    (N'Farr Cuseck',11537,275,N'fcuseckh@icio.us',N'231-939-9551'),
+    (N'Shanan Cowsby',386330,499,N'scowsbyi@surveymonkey.com',N'724-583-7244'),
+    (N'Ailene Havoc',509869,279,N'ahavocj@nydailynews.com',N'377-732-0624'),
+    (N'Leela Wallbrook',4149,378,N'lwallbrookk@icio.us',N'860-121-7883'),
+    (N'Eldredge Paliser',267470,401,N'epaliserl@slideshare.net',N'633-253-2987'),
+    (N'Pebrook Queree',175728,381,N'pquereem@people.com.cn',N'347-803-9252'),
+    (N'Ranee Carlens',43166,354,N'rcarlensn@scientificamerican.com',N'682-898-1240'),
+    (N'Alexine Sacase',838545,492,N'asacaseo@etsy.com',N'755-281-7899'),
+    (N'Stevy Pickin',57949,389,N'spickinp@tinyurl.com',N'363-739-5282'),
+    (N'Davis Springall',878020,345,N'dspringallq@fc2.com',N'649-199-7636'),
+    (N'Brittni Skase',383787,396,N'bskaser@webmd.com',N'203-935-8881'),
+    (N'Hymie Casaroli',194088,496,N'hcasarolis@dailymotion.com',N'652-111-1649'),
+    (N'Nora Steptow',643170,464,N'nsteptowt@nhs.uk',N'807-348-7555'),
+    (N'Melina Bakesef',749279,397,N'mbakesefu@ucoz.com',N'181-960-1710'),
+    (N'Karlotta Coutts',857323,273,N'kcouttsv@stanford.edu',N'992-380-1723'),
+    (N'Kevin Pietri',547957,345,N'kpietriw@businesswire.com',N'292-703-3539'),
+    (N'Marybelle Antcliff',309670,336,N'mantcliffx@abc.net.au',N'483-488-9477'),
+    (N'Farleigh Geertsen',212632,447,N'fgeertseny@google.it',N'987-140-0338'),
+    (N'Sunny Sybry',488665,377,N'ssybryz@istockphoto.com',N'997-136-3964'),
+    (N'Randolf Oloshin',459556,268,N'roloshin10@wsj.com',N'129-706-0866'),
+    (N'Shirlee Hugett',343085,331,N'shugett11@4shared.com',N'676-223-7250'),
+    (N'Jake Goldster',484429,446,N'jgoldster12@buzzfeed.com',N'211-630-4579'),
+    (N'Stacia Phizackerly',925628,405,N'sphizackerly13@soundcloud.com',N'156-478-2292'),
+    (N'Fionna Ellershaw',427608,278,N'fellershaw14@icq.com',N'390-498-5516'),
+    (N'Guthrie Tallon',382738,367,N'gtallon15@nbcnews.com',N'571-350-6445'),
+    (N'Louise Wogden',244019,446,N'lwogden16@webnode.com',N'708-175-8019'),
+    (N'Susette Bramsom',127990,379,N'sbramsom17@home.pl',N'194-440-6442'),
+    (N'Esmaria Forgan',30637,431,N'eforgan18@example.com',N'791-434-2559'),
+    (N'Baxie Morfett',64806,430,N'bmorfett19@mashable.com',N'176-615-9571'),
+    (N'Karmen Daud',603841,378,N'kdaud1a@aol.com',N'484-352-1425'),
+    (N'Dedie Merveille',709768,306,N'dmerveille1b@deviantart.com',N'386-403-1674'),
+    (N'Marian Vlasenkov',76019,438,N'mvlasenkov1c@51.la',N'350-487-6389'),
+    (N'Maude Fidian',212396,403,N'mfidian1d@pinterest.com',N'775-253-1306');
 
 
